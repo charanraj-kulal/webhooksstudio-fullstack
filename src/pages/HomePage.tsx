@@ -8,6 +8,7 @@ import Footer from "../components/Footer";
 import { useTheme } from "next-themes";
 import Particles from "@/components/magicui/particles";
 import Promo from "../components/Promo";
+import Pricing from "@/components/Pricing";
 
 const HomePage = () => {
   const { theme } = useTheme(); // Moved inside the component
@@ -31,6 +32,7 @@ const HomePage = () => {
       <Promo />
       <About />
       <Service />
+      <Pricing />
       <Contact />
       <Footer />
     </div>

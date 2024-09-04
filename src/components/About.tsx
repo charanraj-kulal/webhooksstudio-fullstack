@@ -9,8 +9,15 @@ import { useTheme } from "next-themes";
 import Particles from "@/components/magicui/particles";
 import ourLogo from "../assets/images/icons/favicon.png";
 import PlanIcon from "../assets/images/icons/plan_ic.png";
+import IdeaIcon from "../assets/images/icons/idea_ic.png";
+import DedIcon from "../assets/images/icons/ded_ic.png";
+import ThinkIcon from "../assets/images/icons/think_ic.png";
+import ResearchIcon from "../assets/images/icons/research_ic.png";
+import ProgressIcon from "../assets/images/icons/progress_ic.png";
+import AimIcon from "../assets/images/icons/aim_ic.png";
 import Meteors from "@/components/magicui/meteors";
 import ShineBorder from "@/components/magicui/shine-border";
+import TypingAnimation from "@/components/magicui/typing-animation";
 
 const Circle = forwardRef<
   HTMLDivElement,
@@ -49,9 +56,13 @@ export function About({ className }: { className?: string }) {
 
   return (
     <>
-      <div className="relative flex flex-col md:flex-row h-auto md:h-[700px] w-full items-center justify-center">
+      <div className="relative  h-auto md:h-[700px] w-full items-center justify-center">
+        <TypingAnimation
+          className="text-4xl font-bold text-white mb-10"
+          text="Who are we?."
+        />
         <ShineBorder
-          className="transition duration-700 ease-in-out flex flex-col md:flex-row backdrop-blur-sm text-white bg-black/5 z-[9999] w-full sm:w-11/12 lg:w-10/12 p-6 sm:p-8 gap-6 sm:gap-8 lg:gap-16 items-center justify-between relative h-[400px] sm:h-[500px] overflow-hidden rounded-lg border md:shadow-xl"
+          className="container transition duration-700 ease-in-out flex flex-col md:flex-row  border-white/15 backdrop-blur-sm text-white bg-black/5 z-[9999] w-full sm:w-11/12 lg:w-10/12 p-6 sm:p-8 gap-6 sm:gap-8 lg:gap-16 items-center justify-between relative h-[400px] sm:h-[500px] overflow-hidden rounded-lg border md:shadow-xl"
           color={["#A07CFE", "#FE8FB5", "#FFBE7B"]}
         >
           {/* Left Text Section */}
@@ -120,28 +131,16 @@ export function About({ className }: { className?: string }) {
                     />
                   </Circle>
                   <Circle ref={div2Ref}>
-                    <img
-                      src="src/assets/images/icons/think_ic.png"
-                      alt="Think Icon"
-                    />
+                    <img src={ThinkIcon} alt="Think Icon" />
                   </Circle>
                   <Circle ref={div3Ref}>
-                    <img
-                      src="src/assets/images/icons/idea_ic.png"
-                      alt="Idea Icon"
-                    />
+                    <img src={IdeaIcon} alt="Idea Icon" />
                   </Circle>
                   <Circle ref={div4Ref}>
-                    <img
-                      src="src/assets/images/icons/research_ic.png"
-                      alt="Research Icon"
-                    />
+                    <img src={ResearchIcon} alt="Research Icon" />
                   </Circle>
                   <Circle ref={div5Ref}>
-                    <img
-                      src="src/assets/images/icons/aim_ic.png"
-                      alt="Aim Icon"
-                    />
+                    <img src={AimIcon} alt="Aim Icon" />
                   </Circle>
                 </div>
                 <div className="flex flex-col justify-center">
@@ -151,10 +150,7 @@ export function About({ className }: { className?: string }) {
                 </div>
                 <div className="flex flex-col justify-center">
                   <Circle ref={div7Ref}>
-                    <img
-                      src="src/assets/images/icons/progress_ic.png"
-                      alt="Progress Icon"
-                    />
+                    <img src={ProgressIcon} alt="Progress Icon" />
                   </Circle>
                 </div>
               </div>
