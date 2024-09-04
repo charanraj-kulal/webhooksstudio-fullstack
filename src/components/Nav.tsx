@@ -8,7 +8,11 @@ const Nav = () => {
         <div className="flex justify-between items-center md:border border-white/15 p-2 md:p-3 rounded-xl max-w-10xl mx-auto">
           <div className="flex items-center mx-9 ">
             <div className="inline-flex items-center justify-center p-2 border border-white/15 rounded-lg mr-3">
-              <img src={NavIcon} alt="WebHooks Studio Logo" className="h-10 " />
+              <img
+                src="https://ibb.co/822cqBs"
+                alt="WebHooks Studio Logo"
+                className="h-10 "
+              />
             </div>
             <span className="text-xl font-bold">WebHooksStudio</span>
           </div>
