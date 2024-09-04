@@ -51,7 +51,7 @@ export function About({ className }: { className?: string }) {
     <>
       <div className="relative flex flex-col md:flex-row h-auto md:h-[700px] w-full items-center justify-center">
         <ShineBorder
-          className="transition duration-700 ease-in-out flex flex-col md:flex-row backdrop-blur-sm text-white bg-black/5 shadow-[0_10px_190px_rgba(8,_112,_184,_0.3)] hover:shadow-[0_10px_190px_rgba(8,_112,_184,_0.5)] z-[9999] w-full sm:w-11/12 lg:w-10/12 p-6 sm:p-8 gap-6 sm:gap-8 lg:gap-16 items-center justify-between relative h-[400px] sm:h-[500px] overflow-hidden rounded-lg border md:shadow-xl"
+          className="transition duration-700 ease-in-out flex flex-col md:flex-row backdrop-blur-sm text-white bg-black/5 z-[9999] w-full sm:w-11/12 lg:w-10/12 p-6 sm:p-8 gap-6 sm:gap-8 lg:gap-16 items-center justify-between relative h-[400px] sm:h-[500px] overflow-hidden rounded-lg border md:shadow-xl"
           color={["#A07CFE", "#FE8FB5", "#FFBE7B"]}
         >
           {/* Left Text Section */}
