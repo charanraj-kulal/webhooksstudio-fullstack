@@ -51,16 +51,13 @@ const Nav = () => {
                   </a>
                 </li>
                 <li>
-                  <a
-                    href="#services"
-                    className="hover:text-purple-500 transition"
-                  >
+                  <a href="#about" className="hover:text-purple-500 transition">
                     About
                   </a>
                 </li>
                 <li>
                   <a
-                    href="#portfolio"
+                    href="#services"
                     className="hover:text-purple-500 transition"
                   >
                     Services
@@ -68,7 +65,7 @@ const Nav = () => {
                 </li>
                 <li>
                   <a
-                    href="#contact"
+                    href="#pricing"
                     className="hover:text-purple-500 transition"
                   >
                     Pricing
