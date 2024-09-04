@@ -28,13 +28,14 @@ const Nav = () => {
   return (
     <header
       className={`transition-all duration-300 border-b border-white/15 py-4 text-white md:border-none z-[10000] ${
-        isSticky
-          ? "fixed top-0 left-0 right-0 bg-black/30 backdrop-blur-sm"
-          : ""
+        isSticky ? "fixed top-0 left-0 right-0" : ""
       }`}
     >
       <div className="container-fluid md:container">
-        <div className="flex justify-between items-center md:border border-white/15 p-2 md:p-3 rounded-xl max-w-10xl mx-auto">
+        <div
+          className={`flex justify-between items-center md:border border-white/15 p-2 md:p-3 rounded-xl max-w-10xl mx-auto
+        ${isSticky ? " bg-black/30 backdrop-blur-sm" : ""}`}
+        >
           <div className="flex items-center mx-9">
             <div className="inline-flex items-center justify-center p-2 border border-white/15 rounded-lg mr-3">
               <img src={NavIcon} alt="WebHooks Studio Logo" className="h-10" />
