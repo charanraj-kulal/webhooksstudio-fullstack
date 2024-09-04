@@ -18,10 +18,17 @@ const Hero = () => {
 
   return (
     <section className="text-white relative overflow-hidden bg-black">
-      <div className="relative flex h-[700px] w-full flex-col items-center justify-center overflow-hidden rounded-lg  md:shadow-xl">
-        <div className="container mx-auto flex flex-col md:flex-row items-center justify-between py-16 px-8 relative z-10">
+      <Particles
+        className="absolute inset-0 z-0"
+        quantity={100}
+        ease={80}
+        color={color}
+        refresh
+      />
+      <div className="relative flex h-[700px] w-full flex-col items-center justify-center overflow-hidden rounded-lg md:shadow-xl z-10">
+        <div className="container mx-auto flex flex-col md:flex-row items-center justify-between py-16 px-8 z-10">
           {/* Left Text Section */}
-          <div className="w-full md:w-6/12 text-center md:text-left">
+          <div className="w-full md:w-6/12 text-4xl md:text-7xl text-center md:text-left">
             <BlurIn word={"Welcome to WebHooks Studio"} />
             <p className="text-xl md:text-2xl my-6">
               We create stunning websites that drive your business forward.
@@ -48,14 +55,6 @@ const Hero = () => {
           <Ripple />
         </div>
       </div>
-      {/* Particles Background */}
-      <Particles
-        className="absolute inset-0"
-        quantity={100}
-        ease={80}
-        color={color}
-        refresh
-      />
     </section>
   );
 };
