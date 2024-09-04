@@ -62,7 +62,7 @@ export function About({ className }: { className?: string }) {
           text="Who are we?."
         />
         <ShineBorder
-          className="container transition duration-700 ease-in-out flex flex-col md:flex-row  border-white/15 backdrop-blur-sm text-white bg-black/5 z-[9999] w-full sm:w-11/12 lg:w-10/12 p-6 sm:p-8 gap-6 sm:gap-8 lg:gap-16 items-center justify-between relative h-[400px] sm:h-[500px] overflow-hidden rounded-lg border md:shadow-xl"
+          className="container md:container transition duration-700 ease-in-out flex flex-col md:flex-row  border-white/15 backdrop-blur-sm text-white bg-black/5 z-[9999] w-full sm:w-11/12 lg:w-10/12 p-6 sm:p-8 gap-6 sm:gap-8 lg:gap-16 items-center justify-between relative h-[400px] sm:h-[500px] overflow-hidden rounded-lg border md:shadow-xl"
           color={["#A07CFE", "#FE8FB5", "#FFBE7B"]}
         >
           {/* Left Text Section */}
@@ -113,7 +113,7 @@ export function About({ className }: { className?: string }) {
           </div>
 
           {/* Right Animated Beam Section */}
-          <div className="relative flex w-full md:w-1/2 flex-col items-center justify-center   md:shadow-xl">
+          <div className="relative hidden  w-full md:w-1/2  md:flex flex-col items-center justify-center   md:shadow-xl">
             <div
               className={cn(
                 "relative flex h-[300px] md:h-[500px] w-full items-center justify-center overflow-hidden p-4 md:p-10 md:shadow-xl",

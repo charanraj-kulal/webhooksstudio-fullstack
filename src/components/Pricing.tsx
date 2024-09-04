@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { MagicCard } from "@/components/magicui/magic-card";
 import { useTheme } from "next-themes";
 import TypingAnimation from "@/components/magicui/typing-animation";
@@ -6,8 +6,13 @@ import Meteors from "@/components/magicui/meteors";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faClock } from "@fortawesome/free-solid-svg-icons";
 import { faCheck } from "@fortawesome/free-solid-svg-icons";
+import Particles from "@/components/magicui/particles";
 const Pricing: React.FC = () => {
   const { theme } = useTheme();
+  const [color, setColor] = useState("#ffffff");
+  useEffect(() => {
+    setColor("#ffffff");
+  }, [theme]);
 
   const pricingPlans = [
     {
@@ -70,6 +75,13 @@ const Pricing: React.FC = () => {
     <section id="pricing">
       <div className="container flex justify-center min-h-[2rem] py-52">
         <div className="relative flex flex-col w-full h-fit items-center justify-center container mx-auto">
+          <Particles
+            className="absolute inset-0 z-0"
+            quantity={100}
+            ease={80}
+            color={color}
+            refresh
+          />
           <Meteors number={7} />
           <TypingAnimation
             className="text-4xl font-bold text-white mb-10"

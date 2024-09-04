@@ -35,7 +35,7 @@ const Hero = () => {
             <p className="text-xl md:text-xl my-6 ">
               We create{" "}
               <WordRotate
-                className="text-xl font-bold text-white"
+                className="text-xl font-semibold  text-white"
                 words={[
                   "Stunning",
                   "Magnificent",
