@@ -57,7 +57,7 @@ export function About({ className }: { className?: string }) {
   return (
     <>
       <section id="about">
-        <div className="relative  h-auto md:h-[700px] w-full items-center justify-center">
+        <div className="relative   min-h-[2rem] py-10 md:h-[700px] w-full items-center justify-center">
           <TypingAnimation
             className="text-4xl font-bold text-white mb-10"
             text="Who are we?."

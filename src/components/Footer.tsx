@@ -7,13 +7,17 @@ import {
   faInstagram,
 } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope, faPhoneAlt } from "@fortawesome/free-solid-svg-icons";
+import FooterIcon from "../assets/images/logo/logo_ic.png";
 
 const Footer = () => {
   return (
     <footer className="bg-gray-800 text-white pt-10">
       <div className="container mx-auto flex flex-col md:flex-row justify-between items-center">
         {/* Logo */}
-        <div className="mb-6 md:mb-0">
+        <div className="flex items-center mb-6 md:mb-0">
+          <div className=" items-center justify-center p-2 border border-white/15 rounded-lg mr-3">
+            <img src={FooterIcon} alt="WebHooks Studio Logo" className="h-10" />
+          </div>
           <h1 className="text-3xl font-bold">WebHooks Studio</h1>
         </div>
 
@@ -67,9 +71,16 @@ const Footer = () => {
 
       {/* Footer Bottom */}
       <div className="bg-gray-700 text-center py-4 mt-8">
-        <p className="text-gray-400 text-sm">
-          © {new Date().getFullYear()} WebHooks Studio. All rights reserved.
-        </p>
+        <div>
+          <p className="text-gray-400 text-sm mb-1">
+            Made with ♥︎ by Charanraj.
+          </p>
+        </div>
+        <div>
+          <p className="text-gray-400 text-sm">
+            © {new Date().getFullYear()} WebHooks Studio. All rights reserved.
+          </p>
+        </div>
       </div>
     </footer>
   );

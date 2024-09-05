@@ -6,7 +6,7 @@ import Service from "../components/Services";
 import Contact from "../components/Contact";
 import Footer from "../components/Footer";
 import { useTheme } from "next-themes";
-
+import Particles from "@/components/magicui/particles";
 import Promo from "../components/Promo";
 import Pricing from "@/components/Pricing";
 
@@ -19,16 +19,25 @@ const HomePage = () => {
   }, [theme]);
 
   return (
-    <div>
-      <Nav />
-      <HeroSection />
-      <Promo />
-      <About />
-      <Service />
-      <Pricing />
-      <Contact />
+    <>
+      <div className="relative">
+        <Particles
+          className="absolute inset-0 -z-50"
+          quantity={100}
+          ease={80}
+          color={color}
+          refresh
+        />
+        <Nav />
+        <HeroSection />
+        <Promo />
+        <About />
+        <Service />
+        <Pricing />
+        <Contact />
+      </div>
       <Footer />
-    </div>
+    </>
   );
 };
 

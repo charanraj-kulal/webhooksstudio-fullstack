@@ -63,7 +63,7 @@ const Contact: React.FC = () => {
 
   return (
     <section id="contact">
-      <div className="container flex justify-center min-h-[2rem] py-52">
+      <div className="container flex justify-center min-h-[2rem] py-20">
         <div className="relative flex flex-col w-full h-fit items-center justify-center container mx-auto">
           <Particles
             className="absolute inset-0 z-0"

@@ -15,7 +15,7 @@ const Promo = () => {
   }, [theme]);
 
   return (
-    <div className="relative z-[9999] flex min-h-[2rem] items-center justify-center bg-black text-white">
+    <div className="relative z-[9999] hidden md:flex min-h-[2rem] items-center justify-center bg-black text-white">
       <TextReveal text="Discover Tailored Solutions, Crafted Just for You" />
 
       {/* Particles Background */}
