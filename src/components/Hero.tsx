@@ -17,6 +17,12 @@ const Hero = () => {
     setColor("#ffffff");
   }, [theme]);
 
+  const handleContactClick = () => {
+    const contactSection = document.querySelector("#contact");
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
   return (
     <section className="text-white relative overflow-hidden bg-black">
       <Particles
@@ -48,9 +54,12 @@ const Hero = () => {
             </p>
 
             <div className="z-10 flex items-center justify-center">
-              <ShimmerButton className="shadow-2xl">
+              <ShimmerButton
+                className="shadow-2xl"
+                onClick={handleContactClick}
+              >
                 <span className="whitespace-pre-wrap text-center text-sm font-medium leading-none tracking-tight text-white dark:from-white dark:to-slate-900/10 lg:text-lg">
-                  Join Now
+                  Contact Now
                 </span>
               </ShimmerButton>
             </div>
