@@ -72,7 +72,7 @@ const AboutPage = () => {
 
             <p className="mt-6 text-lg">
               For any further queries, feel free to{" "}
-              <Link to="/contact" className="text-purple-500 hover:underline">
+              <Link to="/#contact" className="text-purple-500 hover:underline">
                 contact WebHooks Studio
               </Link>
               .
