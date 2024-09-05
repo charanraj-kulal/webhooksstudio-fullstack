@@ -3,7 +3,7 @@
 import React, { forwardRef, useRef, useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
 import { AnimatedBeam } from "@/components/magicui/animated-beam";
-
+import { Link } from "react-router-dom";
 import BlurIn from "@/components/magicui/blur-in";
 import { useTheme } from "next-themes";
 import Particles from "@/components/magicui/particles";
@@ -87,8 +87,8 @@ export function About({ className }: { className?: string }) {
                 success.
               </p>
               <div className="flex justify-center">
-                <a
-                  href="#_"
+                <Link
+                  to="/aboutus"
                   className="relative p-0.5 inline-flex items-center justify-center font-bold overflow-hidden group rounded-md"
                 >
                   <span className="w-full h-full bg-gradient-to-br from-[#ff8a05] via-[#ff5478] to-[#ff00c6] group-hover:from-[#ff00c6] group-hover:via-[#ff5478] group-hover:to-[#ff8a05] absolute"></span>
@@ -111,7 +111,7 @@ export function About({ className }: { className?: string }) {
                       ></path>
                     </svg>
                   </span>
-                </a>
+                </Link>
               </div>
             </div>
 
