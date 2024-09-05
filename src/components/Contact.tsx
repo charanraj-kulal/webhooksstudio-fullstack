@@ -2,24 +2,17 @@
 
 import React, { useState, useEffect } from "react";
 import { MagicCard } from "@/components/magicui/magic-card";
-
 import TypingAnimation from "@/components/magicui/typing-animation";
 import Meteors from "@/components/magicui/meteors";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
-import Particles from "@/components/magicui/particles";
-import { AnimatedSubscribeButton } from "@/components/magicui/animated-subscribe-button";
-import { CheckIcon, ChevronRightIcon } from "lucide-react";
+import { ChevronRightIcon, CheckIcon } from "lucide-react";
 import emailjs from "emailjs-com";
 import { useTheme } from "next-themes";
+import Particles from "@/components/magicui/particles";
+import { AnimatedSubscribeButton } from "@/components/magicui/animated-subscribe-button";
 
 const Contact: React.FC = () => {
   const { theme } = useTheme();
   const [color, setColor] = useState("#ffffff");
-
-  useEffect(() => {
-    setColor("#ffffff");
-  }, [theme]);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -27,6 +20,27 @@ const Contact: React.FC = () => {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState("");
+  const [isFormValid, setIsFormValid] = useState(false);
+
+  useEffect(() => {
+    setColor("#ffffff");
+  }, [theme]);
+
+  // Validate email format
+  const validateEmail = (email: string) => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  };
+
+  // Validate form fields
+  useEffect(() => {
+    const { name, email, subject } = formData;
+    if (name && email && validateEmail(email) && subject) {
+      setIsFormValid(true);
+    } else {
+      setIsFormValid(false);
+    }
+  }, [formData]);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
@@ -40,12 +54,18 @@ const Contact: React.FC = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
+    const templateParams = {
+      to_name: "WebHooks Studio", // Replace with recipient's name or company name
+      from_name: formData.name, // From the form input field
+      message: formData.subject, // Message from form input field
+    };
+
     emailjs
-      .sendForm(
-        "YOUR_SERVICE_ID",
-        "YOUR_TEMPLATE_ID",
-        e.currentTarget,
-        "YOUR_USER_ID"
+      .send(
+        "service_9efojjc",
+        "template_e8weiwn",
+        templateParams,
+        "MPHSo2VIdtCeZVx_B"
       )
       .then(
         (result) => {
@@ -77,9 +97,9 @@ const Contact: React.FC = () => {
             className="text-4xl font-bold text-white mb-10"
             text="Curious About us?."
           />
-          <div className="flex flex-wrap gap-4 justify-center lg:flex-nowrap lg:gap-8">
+          <div className="flex flex-wrap gap-4 w-11/12 md:w-4/12  justify-center lg:flex-nowrap lg:gap-8">
             <MagicCard
-              className="transition min-h-96 duration-700 ease-in-out cursor-pointer flex-col items-center justify-center text-center shadow-[0_10px_190px_rgba(8,_112,_184,_0.2)] hover:shadow-[0_10px_190px_rgba(8,_112,_184,_0.4)] p-20 sm:p-8 lg:p-10 border border-white/30 hover:border-white/50 rounded-xl"
+              className="transition min-h-96 w-11/12 md:w-full duration-700 ease-in-out cursor-pointer flex-col items-center justify-center text-center shadow-[0_10px_190px_rgba(8,_112,_184,_0.2)] hover:shadow-[0_10px_190px_rgba(8,_112,_184,_0.4)] md:px-60 p-20 sm:p-8 lg:p-10 border border-white/30 hover:border-white/50 rounded-xl"
               gradientColor={"#A020F0"}
             >
               <h2 className="text-2xl font-bold mb-4">Contact Us</h2>
@@ -97,7 +117,7 @@ const Contact: React.FC = () => {
                     name="name"
                     value={formData.name}
                     onChange={handleChange}
-                    className="w-full p-3 bg-transparent rounded-lg border border-gray-300"
+                    className="w-full p-3 px-7 md:px-9  bg-transparent rounded-lg border border-gray-300"
                     required
                   />
                 </div>
@@ -117,13 +137,18 @@ const Contact: React.FC = () => {
                     className="w-full p-3 rounded-lg border bg-transparent border-gray-300"
                     required
                   />
+                  {!validateEmail(formData.email) && formData.email && (
+                    <p className="text-red-500 text-sm">
+                      Please enter a valid email.
+                    </p>
+                  )}
                 </div>
                 <div>
                   <label
                     htmlFor="subject"
                     className="block text-lg text-white mb-2"
                   >
-                    Subject
+                    Message
                   </label>
                   <input
                     type="text"
@@ -136,8 +161,6 @@ const Contact: React.FC = () => {
                   />
                 </div>
                 <div className="flex justify-center mt-6">
-                  {" "}
-                  {/* Centering the button */}
                   <AnimatedSubscribeButton
                     buttonColor="#ffffff"
                     buttonTextColor="#000000"
@@ -154,9 +177,20 @@ const Contact: React.FC = () => {
                         Sent{" "}
                       </span>
                     }
+                    disabled={!isFormValid || isSubmitting} // Disable if invalid or submitting
                   />
                 </div>
               </form>
+              {submitStatus === "success" && (
+                <p className="text-green-500 mt-4">
+                  Message sent we'll get back you shortly!
+                </p>
+              )}
+              {submitStatus === "error" && (
+                <p className="text-red-500 mt-4">
+                  There was an error sending your message.
+                </p>
+              )}
             </MagicCard>
           </div>
         </div>

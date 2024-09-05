@@ -9,6 +9,7 @@ interface AnimatedSubscribeButtonProps {
   subscribeStatus: boolean;
   initialText: React.ReactElement | string;
   changeText: React.ReactElement | string;
+  disabled?: boolean; // Add a disabled prop
 }
 
 export const AnimatedSubscribeButton: React.FC<
@@ -19,6 +20,7 @@ export const AnimatedSubscribeButton: React.FC<
   buttonTextColor,
   changeText,
   initialText,
+  disabled = false, // Default value for disabled prop
 }) => {
   const [isSubscribed, setIsSubscribed] = useState<boolean>(subscribeStatus);
 
@@ -27,10 +29,11 @@ export const AnimatedSubscribeButton: React.FC<
       {isSubscribed ? (
         <motion.button
           className="relative flex w-[200px] items-center justify-center overflow-hidden rounded-md bg-black p-[10px] outline outline-1 outline-white"
-          onClick={() => setIsSubscribed(false)}
+          onClick={() => !disabled && setIsSubscribed(false)} // Only allow click if not disabled
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
+          disabled={disabled} // Apply the disabled state
         >
           <motion.span
             key="action"
@@ -45,11 +48,17 @@ export const AnimatedSubscribeButton: React.FC<
       ) : (
         <motion.button
           className="relative flex w-[200px] cursor-pointer items-center justify-center rounded-md border-none p-[10px]"
-          style={{ backgroundColor: buttonColor, color: buttonTextColor }}
-          onClick={() => setIsSubscribed(true)}
+          style={{
+            backgroundColor: buttonColor,
+            color: buttonTextColor,
+            cursor: disabled ? "not-allowed" : "pointer", // Change cursor style when disabled
+            opacity: disabled ? 0.6 : 1, // Reduce opacity when disabled
+          }}
+          onClick={() => !disabled && setIsSubscribed(true)} // Only allow click if not disabled
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
+          disabled={disabled} // Apply the disabled state
         >
           <motion.span
             key="reaction"
