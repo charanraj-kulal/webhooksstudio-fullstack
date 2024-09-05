@@ -97,9 +97,9 @@ const Contact: React.FC = () => {
             className="text-4xl font-bold text-white mb-10"
             text="Curious About us?."
           />
-          <div className="flex flex-wrap gap-4 w-11/12 md:w-4/12  justify-center lg:flex-nowrap lg:gap-8">
+          <div className="flex flex-wrap gap-4 w-full justify-center lg:flex-nowrap lg:gap-8">
             <MagicCard
-              className="transition min-h-96 w-11/12 md:w-full duration-700 ease-in-out cursor-pointer flex-col items-center justify-center text-center shadow-[0_10px_190px_rgba(8,_112,_184,_0.2)] hover:shadow-[0_10px_190px_rgba(8,_112,_184,_0.4)] md:px-60 p-20 sm:p-8 lg:p-10 border border-white/30 hover:border-white/50 rounded-xl"
+              className="transition min-h-96 w-full max-w-md duration-700 ease-in-out cursor-pointer flex-col items-center justify-center text-center shadow-[0_10px_190px_rgba(8,_112,_184,_0.2)] hover:shadow-[0_10px_190px_rgba(8,_112,_184,_0.4)] p-6 md:p-8 lg:p-10 border border-white/30 hover:border-white/50 rounded-xl"
               gradientColor={"#A020F0"}
             >
               <h2 className="text-2xl font-bold mb-4">Contact Us</h2>
@@ -117,7 +117,7 @@ const Contact: React.FC = () => {
                     name="name"
                     value={formData.name}
                     onChange={handleChange}
-                    className="w-full p-3 px-7 md:px-9  bg-transparent rounded-lg border border-gray-300"
+                    className="w-full p-3 px-4 md:px-5 bg-transparent rounded-lg border border-gray-300"
                     required
                   />
                 </div>
@@ -134,11 +134,11 @@ const Contact: React.FC = () => {
                     name="email"
                     value={formData.email}
                     onChange={handleChange}
-                    className="w-full p-3 rounded-lg border bg-transparent border-gray-300"
+                    className="w-full p-3 px-4 md:px-5 rounded-lg border bg-transparent border-gray-300"
                     required
                   />
                   {!validateEmail(formData.email) && formData.email && (
-                    <p className="text-red-500 text-sm">
+                    <p className="text-red-500 text-sm mt-1">
                       Please enter a valid email.
                     </p>
                   )}
@@ -156,7 +156,7 @@ const Contact: React.FC = () => {
                     name="subject"
                     value={formData.subject}
                     onChange={handleChange}
-                    className="w-full p-3 bg-transparent rounded-lg border border-gray-300"
+                    className="w-full p-3 px-4 md:px-5 bg-transparent rounded-lg border border-gray-300"
                     required
                   />
                 </div>
@@ -183,7 +183,7 @@ const Contact: React.FC = () => {
               </form>
               {submitStatus === "success" && (
                 <p className="text-green-500 mt-4">
-                  Message sent we'll get back you shortly!
+                  Message sent! We'll get back to you shortly!
                 </p>
               )}
               {submitStatus === "error" && (

@@ -21,22 +21,27 @@ const HomePage = () => {
   return (
     <>
       <div className="relative">
-        <Particles
-          className="absolute inset-0 -z-50"
-          quantity={100}
-          ease={80}
-          color={color}
-          refresh
-        />
-        <Nav />
-        <HeroSection />
+        <div style={{ overflowX: "hidden" }}>
+          <Particles
+            className="absolute inset-0 -z-50"
+            quantity={100}
+            ease={80}
+            color={color}
+            refresh
+          />
+          <Nav />
+          <HeroSection />
+        </div>
         <Promo />
-        <About />
-        <Service />
-        <Pricing />
-        <Contact />
+        <div style={{ overflowX: "hidden" }}>
+          <About />
+          <Service />
+          <Pricing />
+          <Contact />
+
+          <Footer />
+        </div>
       </div>
-      <Footer />
     </>
   );
 };
