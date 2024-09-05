@@ -1,50 +1,21 @@
-# React + TypeScript + Vite
+# Webhooks Studio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is an official website created for commercial purposes.
 
-Currently, two official plugins are available:
+If you want to use any part of this website kindly reach out to: wehooksstudio@gmail.com
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+![image](https://github.com/user-attachments/assets/fa01a99a-0b5c-4709-bc97-c528b9ac1974)
 
-## Expanding the ESLint configuration
+To clone and use you can just follow these steps:
+1. Clone this repo.
+2. ```npm i``` or ```npm install```
+3. ```npm run dev```
+4. Now this project will be running on the local server.
+5. But make sure to give credit to us.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+Credits:
+Thanks to: https://github.com/dillionverma  and  https://magicui.design/
 
-- Configure the top-level `parserOptions` property like this:
+© 2024 WebHooks Studio. All rights reserved.
+MIT Licenced.
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
-
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
