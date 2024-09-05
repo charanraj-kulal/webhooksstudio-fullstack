@@ -24,7 +24,7 @@ const Hero = () => {
     }
   };
   return (
-    <section className="text-white relative overflow-hidden bg-black">
+    <section id="home" className="text-white relative overflow-hidden bg-black">
       <Particles
         className="absolute inset-0 z-0"
         quantity={100}

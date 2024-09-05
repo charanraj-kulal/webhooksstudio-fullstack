@@ -39,7 +39,7 @@ export default function ShineBorder({
         } as React.CSSProperties
       }
       className={cn(
-        "relative grid min-h-[60px] w-fit min-w-[300px] place-items-center rounded-[--border-radius] bg-white text-black dark:bg-black dark:text-white transition-shadow duration-700 ease-in-out shadow-[0_4px_190px_rgba(0,_0,_0,_0.1)] hover:shadow-[0_10px_190px_rgba(8,_112,_184,_0.5)]",
+        "relative grid min-h-[60px] w-fit min-w-[250px] md:min-w-[300px] place-items-center rounded-[--border-radius] bg-white text-black dark:bg-black dark:text-white transition-shadow duration-700 ease-in-out shadow-[0_4px_190px_rgba(0,_0,_0,_0.1)] hover:shadow-[0_10px_190px_rgba(8,_112,_184,_0.5)]",
         className
       )}
     >

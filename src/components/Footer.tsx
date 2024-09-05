@@ -11,7 +11,7 @@ import FooterIcon from "../assets/images/logo/logo_ic.png";
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-800 text-white pt-10">
+    <footer className="bg-black/60 backdrop-blur-sm shadow-[0_10px_190px_rgba(8,_112,_184,_0.7)] text-white pt-10 mt-10">
       <div className="container mx-auto flex flex-col md:flex-row justify-between items-center">
         {/* Logo */}
         <div className="flex items-center mb-6 md:mb-0">
@@ -70,7 +70,7 @@ const Footer = () => {
       </div>
 
       {/* Footer Bottom */}
-      <div className="bg-gray-700 text-center py-4 mt-8">
+      <div className="bg-black/60 backdrop-blur-sm border-t-2 border-white/15 text-center py-4 mt-8">
         <div>
           <p className="text-gray-400 text-sm mb-1">
             Made with ♥︎ by Charanraj.

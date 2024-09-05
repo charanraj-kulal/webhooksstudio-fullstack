@@ -57,13 +57,13 @@ export function About({ className }: { className?: string }) {
   return (
     <>
       <section id="about">
-        <div className="relative   min-h-[2rem] py-10 md:h-[700px] w-full items-center justify-center">
+        <div className="relative   min-h-[2rem] py-10 md:h-[700px] w-full  items-center justify-center">
           <TypingAnimation
             className="text-4xl font-bold text-white mb-10"
             text="Who are we?."
           />
           <ShineBorder
-            className="container md:container transition duration-700 ease-in-out flex flex-col md:flex-row  border-white/15 backdrop-blur-sm text-white bg-black/5 z-[9999] w-full sm:w-11/12 lg:w-10/12 p-6 sm:p-8 gap-6 sm:gap-8 lg:gap-16 items-center justify-between relative h-[400px] sm:h-[500px] overflow-hidden rounded-lg border md:shadow-xl"
+            className="container transition duration-700 ease-in-out flex flex-col md:flex-row border-white/15 backdrop-blur-sm text-white bg-black/5 z-[9999] w-[90%] md:w-10/12 lg:w-10/12 p-6 sm:p-8 gap-6 sm:gap-8 lg:gap-16 items-center justify-between relative h-[400px] sm:h-[500px] overflow-hidden rounded-lg border md:shadow-xl"
             color={["#A07CFE", "#FE8FB5", "#FFBE7B"]}
           >
             {/* Left Text Section */}

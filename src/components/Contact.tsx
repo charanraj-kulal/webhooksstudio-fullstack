@@ -135,7 +135,9 @@ const Contact: React.FC = () => {
                     required
                   />
                 </div>
-                <div className="ml-5 mt-3">
+                <div className="flex justify-center mt-6">
+                  {" "}
+                  {/* Centering the button */}
                   <AnimatedSubscribeButton
                     buttonColor="#ffffff"
                     buttonTextColor="#000000"
