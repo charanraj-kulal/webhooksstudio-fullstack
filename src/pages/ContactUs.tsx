@@ -8,11 +8,12 @@ import Meteors from "@/components/magicui/meteors";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleLeft, faChevronRight } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
-const AboutPage = () => {
+const ReturnPolicy = () => {
   const { theme } = useTheme(); // Moved inside the component
   const [color, setColor] = useState("#ffffff");
-
+  const navigate = useNavigate();
   useEffect(() => {
     setColor("#ffffff");
   }, [theme]);
@@ -34,44 +35,47 @@ const AboutPage = () => {
 
           {/* MagicCard for More About Us, Refund Policy, and Privacy Policy */}
           <MagicCard
-            className="container transition min-h-96 duration-700 ease-in-out flex-col items-center justify-center text-center shadow-[0_10px_190px_rgba(8,_112,_184,_0.2)] hover:shadow-[0_10px_190px_rgba(8,_112,_184,_0.4)] p-6 sm:p-8 lg:p-10 border border-white/30 hover:border-white/50 rounded-xl"
+            className="container w-11/12 md:w-full  transition min-h-96 duration-700 ease-in-out flex-col items-center justify-center text-center shadow-[0_10px_190px_rgba(8,_112,_184,_0.2)] hover:shadow-[0_10px_190px_rgba(8,_112,_184,_0.4)] p-10 sm:p-8 lg:p-10 border  border-white/30 hover:border-white/50 rounded-xl"
             gradientColor="#A020F0"
           >
-            <h2 className="text-3xl font-bold mb-6">
-              More About WebHooks Studio
-            </h2>
+            <div className="hidden sm:block absolute p-2 px-2 border rounded-lg border-white/30 hover:bg-white hover:text-black transition-all">
+              <p className="text-lg">
+                <button onClick={() => navigate(-1)} className="">
+                  <FontAwesomeIcon className="mr-2" icon={faAngleLeft} />
+                  Back
+                </button>
+              </p>
+            </div>
+            <h2 className="text-3xl mt-6 font-bold mb-6">Contact Us</h2>
             <p className="mb-4">
-              At WebHooks Studio, we are passionate about delivering quality web
-              solutions and digital services to our clients. Our mission is to
-              help businesses of all sizes grow by leveraging cutting-edge
-              technologies, user-friendly designs, and innovative strategies.
-              From web development to digital marketing, we aim to offer
-              comprehensive services that meet your unique needs.
+              We're here to help! If you have any questions or need assistance,
+              feel free to reach out to us through any of the following methods:
             </p>
-
-            <h3 className="text-2xl font-bold mt-8 mb-4">Refund Policy</h3>
-            <p className="mb-4">
-              WebHooks Studio strives to provide the best services to our
-              clients. If you're unsatisfied with a service you've purchased,
-              please contact us within 14 days for a review. Refunds may be
-              provided in cases where the service was not delivered as promised
-              or if there were major issues affecting the usability of the
-              delivered product. We reserve the right to refuse refunds if the
-              service was consumed fully or if the problem is resolved.
-            </p>
-
-            <h3 className="text-2xl font-bold mt-8 mb-4">Privacy Policy</h3>
-            <p className="mb-4">
-              Your privacy is important to WebHooks Studio. We collect only the
-              information necessary to provide our services, such as contact
-              details and project specifications. We do not share your
-              information with third parties unless required by law. All
-              information is securely stored and used solely to improve the
-              services we offer.
-            </p>
-
+            <ul className="text-lg mb-6">
+              <li>
+                <strong>Email:</strong>{" "}
+                <a
+                  href="mailto:webhooksstudio@gmail.com"
+                  className="text-purple-500 hover:underline"
+                >
+                  webhooksstudio@gmail.com
+                </a>
+              </li>
+              <li>
+                <strong>Phone:</strong>{" "}
+                <a
+                  href="tel:+919353649294"
+                  className="text-purple-500 hover:underline"
+                >
+                  +91 9353649294
+                </a>
+              </li>
+              <li>
+                <strong>Location:</strong> Bantwal, Dakshina Kannada-574211
+              </li>
+            </ul>
             <p className="mt-6 text-lg">
-              For any further queries, feel free to{" "}
+              For further assistance or business inquiries,{" "}
               <Link to="/#contact" className="text-purple-500 hover:underline">
                 contact WebHooks Studio
               </Link>
@@ -84,8 +88,6 @@ const AboutPage = () => {
                 Back to Home
               </Link>
             </p>
-          
-
             <div className="mt-4 flex justify-center text-left md:text-center md:ml-0 ml-20 items-center">
               <div className=" justify-center items-center">
                 <ul className=" flex flex-col md:flex-row">
@@ -125,18 +127,7 @@ const AboutPage = () => {
                       Shipping-policy
                     </Link>
                   </li>
-                  <li className="mt-1 md:mt-0">
-                    <Link
-                      to={"/return-policy"}
-                      className="hover:underline text-white/60 hover:text-white hover:tracking-widest px-1 md:px-2 transition-all"
-                    >
-                      <FontAwesomeIcon
-                        icon={faChevronRight}
-                        className="mr-1.5 inline-flex md:hidden"
-                      />
-                      Retun-policy
-                    </Link>
-                  </li>
+
                   <li className="mt-1 md:mt-0">
                     <Link
                       to={"/Cancellation-and-refund-policy"}
@@ -161,4 +152,4 @@ const AboutPage = () => {
   );
 };
 
-export default AboutPage;
+export default ReturnPolicy;

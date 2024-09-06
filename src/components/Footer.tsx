@@ -1,13 +1,19 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 import {
   faFacebookF,
   faTwitter,
   faLinkedinIn,
   faInstagram,
 } from "@fortawesome/free-brands-svg-icons";
-import { faEnvelope, faPhoneAlt } from "@fortawesome/free-solid-svg-icons";
+import {
+  faEnvelope,
+  faPhoneAlt,
+  faChevronRight,
+} from "@fortawesome/free-solid-svg-icons";
 import FooterIcon from "../assets/images/logo/logo_ic.png";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -67,6 +73,71 @@ const Footer = () => {
             +91 9353649294
           </p>
         </div>
+      </div>
+      <div className="mt-4 text-xs flex justify-center items-center">
+        <ul className=" flex flex-col md:flex-row ">
+          <li className="mt-1 md:mt-0">
+            <Link
+              to={"/terms-and-conditions"}
+              className="hover:underline  text-white/50 hover:text-white hover:tracking-widest px-1 md:px-2 transition-all"
+            >
+              <FontAwesomeIcon
+                icon={faChevronRight}
+                className="mr-1.5 inline-flex md:hidden"
+              />
+              Terms-and-condition
+            </Link>
+          </li>
+          <li className="mt-1 md:mt-0">
+            <Link
+              to={"/privacy-policy"}
+              className="hover:underline text-white/50 hover:text-white hover:tracking-widest px-1 md:px-2 transition-all"
+            >
+              <FontAwesomeIcon
+                icon={faChevronRight}
+                className="mr-1.5 inline-flex md:hidden"
+              />
+              Privacy-policy
+            </Link>
+          </li>
+          <li className="mt-1 md:mt-0">
+            <Link
+              to={"/shipping-policy"}
+              className="hover:underline text-white/50 hover:text-white hover:tracking-widest px-1 md:px-2 transition-all"
+            >
+              <FontAwesomeIcon
+                icon={faChevronRight}
+                className="mr-1.5 inline-flex md:hidden"
+              />
+              Shipping-policy
+            </Link>
+          </li>
+
+          <li className="mt-1 md:mt-0">
+            <Link
+              to={"/Cancellation-and-refund-policy"}
+              className="hover:underline text-white/50 hover:text-white hover:tracking-widest px-1 md:px-2 transition-all"
+            >
+              <FontAwesomeIcon
+                icon={faChevronRight}
+                className="mr-1.5 inline-flex md:hidden"
+              />
+              Cancellation-and-refund-policy
+            </Link>
+          </li>
+          <li className="mt-1 md:mt-0">
+            <Link
+              to={"/contact-us"}
+              className="hover:underline text-white/60 hover:text-white hover:tracking-widest px-1 md:px-2 transition-all"
+            >
+              <FontAwesomeIcon
+                icon={faChevronRight}
+                className="mr-1.5 inline-flex md:hidden"
+              />
+              Contact Us
+            </Link>
+          </li>
+        </ul>
       </div>
 
       {/* Footer Bottom */}
