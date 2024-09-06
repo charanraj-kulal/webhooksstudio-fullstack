@@ -58,6 +58,7 @@ const Contact: React.FC = () => {
       to_name: "WebHooks Studio", // Replace with recipient's name or company name
       from_name: formData.name, // From the form input field
       message: formData.subject, // Message from form input field
+      from_email: formData.email, // Message from form input field
     };
 
     emailjs
