@@ -29,16 +29,16 @@ const Footer = () => {
 
         {/* Navigation Links */}
         <div className="flex flex-col md:flex-row mb-6 md:mb-0">
-          <a href="#" className="mx-4 text-lg hover:text-gray-400">
+          <a href="/" className="mx-4 text-lg hover:text-gray-400">
             Home
           </a>
-          <a href="#" className="mx-4 text-lg hover:text-gray-400">
+          <a href="/#about" className="mx-4 text-lg hover:text-gray-400">
             About
           </a>
-          <a href="#" className="mx-4 text-lg hover:text-gray-400">
+          <a href="#services" className="mx-4 text-lg hover:text-gray-400">
             Services
           </a>
-          <a href="#" className="mx-4 text-lg hover:text-gray-400">
+          <a href="#contact" className="mx-4 text-lg hover:text-gray-400">
             Contact
           </a>
         </div>
