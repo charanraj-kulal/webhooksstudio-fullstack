@@ -47,6 +47,7 @@ const ShippingPolicy = () => {
               </p>
             </div>
             <h2 className="text-3xl mt-6 font-bold mb-6">Shipping Policy</h2>
+            <p className="mb-4">Last updated September 05, 2024</p>
             <p className="mb-4">
               At WebHooks Studio, we offer digital services, including website
               delivery. This shipping policy outlines how we deliver our

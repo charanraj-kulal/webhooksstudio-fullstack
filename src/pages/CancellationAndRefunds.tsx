@@ -50,7 +50,7 @@ const CancellationAndRefunds = () => {
             <h2 className="text-3xl mt-6 font-bold mb-6">
               Cancellation and Refund Policy
             </h2>
-
+            <p className="mb-4">Last updated September 05, 2024</p>
             <p className="mb-4">
               At WebHooks Studio, we strive to ensure client satisfaction by
               delivering high-quality websites and digital products. This

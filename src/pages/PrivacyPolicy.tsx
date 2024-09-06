@@ -47,6 +47,7 @@ const PrivacyPolicy = () => {
               </p>
             </div>
             <h2 className="text-3xl mt-6 font-bold mb-6">Privacy Policy</h2>
+            <p className="mb-4">Last updated September 05, 2024</p>
             <p className="mb-4">
               At WebHooks Studio, accessible from{" "}
               <a href="https://webhooksstudio.vercel.app" className="underline">
