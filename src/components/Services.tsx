@@ -30,12 +30,12 @@ const services = [
     icon: "💼", // Replace with the actual icon or image
     gradientColor: "#FF4500",
   },
-  {
-    title: "Email Solutions",
-    description: "Professional email setup and management.",
-    icon: "✉️", // Replace with the actual icon or image
-    gradientColor: "#32CD32",
-  },
+  // {
+  //   title: "Email Solutions",
+  //   description: "Professional email setup and management.",
+  //   icon: "✉️", // Replace with the actual icon or image
+  //   gradientColor: "#32CD32",
+  // },
   {
     title: "Web Development",
     description: "Building custom web applications and websites.",
