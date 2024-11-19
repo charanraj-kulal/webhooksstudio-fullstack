@@ -100,7 +100,7 @@ const Contact: React.FC = () => {
           />
           <div className="flex flex-wrap gap-4 w-full justify-center lg:flex-nowrap lg:gap-8">
             <MagicCard
-              className="transition min-h-96 w-full max-w-md duration-700 ease-in-out cursor-pointer flex-col items-center justify-center text-center shadow-[0_10px_190px_rgba(8,_112,_184,_0.2)] hover:shadow-[0_10px_190px_rgba(8,_112,_184,_0.4)] p-6 md:p-8 lg:p-10 border border-white/30 hover:border-white/50 rounded-xl"
+              className="transition min-h-96 w-full max-w-md duration-700 ease-in-out cursor-pointer flex-col items-center justify-center text-center ] p-6 md:p-8 lg:p-10 border border-white/30 hover:border-white/50 rounded-xl"
               gradientColor={"#A020F0"}
             >
               <h2 className="text-2xl font-bold mb-4">Contact Us</h2>

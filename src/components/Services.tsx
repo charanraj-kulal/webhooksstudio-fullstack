@@ -70,7 +70,7 @@ const Services = () => {
             {services.map((service, index) => (
               <MagicCard
                 key={index}
-                className="transition min-h-96 duration-700 ease-in-out cursor-pointer flex-col items-center justify-center text-center shadow-[0_10px_190px_rgba(8,_112,_184,_0.2)] hover:shadow-[0_10px_190px_rgba(8,_112,_184,_0.4)] p-6 sm:p-8 lg:p-10 border border-white/30 hover:border-white/50 rounded-xl"
+                className="transition min-h-96 duration-700 ease-in-out cursor-pointer flex-col items-center justify-center text-center  p-6 sm:p-8 lg:p-10 border border-white/30 hover:border-white/50 rounded-xl"
                 gradientColor={service.gradientColor}
               >
                 <div className="text-5xl mb-6 p-6 border-b-2 border-white/15">
@@ -86,7 +86,7 @@ const Services = () => {
             {services.map((service, index) => (
               <MagicCard
                 key={index}
-                className="transition min-h-96 duration-700 ease-in-out cursor-pointer flex-col items-center justify-center text-center shadow-[0_10px_190px_rgba(8,_112,_184,_0.2)] hover:shadow-[0_10px_190px_rgba(8,_112,_184,_0.4)] p-6 sm:p-8 lg:p-10 border border-white/30 hover:border-white/50 rounded-xl"
+                className="transition min-h-96 duration-700 ease-in-out cursor-pointer flex-col items-center justify-center text-center  p-6 sm:p-8 lg:p-10 border border-white/30 hover:border-white/50 rounded-xl"
                 gradientColor={service.gradientColor}
               >
                 <div className="text-5xl mb-6 p-6 border-b-2 border-white/15">
